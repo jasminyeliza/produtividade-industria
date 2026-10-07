@@ -71,7 +71,7 @@ with col_right:
         labels={"Eficiencia_%": "Eficiência (%)"}
     )
     fig_ef.add_hline(y=100, line_dash="dash", line_color="green", annotation_text="Meta (100%)")
-    st.plotly_chart(fig_prod, width='stretch')(fig_ef, use_container_width=True)
+    st.plotly_chart(fig_prod, width='stretch')
 
 # ---------------------------------------------------------
 # 5. FORMULÁRIO DE ENTRADA DE DADOS (CENTRALIZAÇÃO DA COLETA)
