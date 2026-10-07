@@ -62,8 +62,8 @@ with col_left:
         df_setor, x="Data", y=["Producao_Planejada", "Producao_Real"],
         barmode="group", labels={"value": "Quantidade", "variable": "Métrica"}
     )
-    st.plotly_chart(fig_prod, width='stretch')
-
+    st.plotly_chart(fig_prod, use_container_width=True, key="grafico_producao_planejada")
+    
 with col_right:
     st.markdown("### Evolução da Eficiência (%)")
     fig_ef = px.line(
@@ -71,7 +71,7 @@ with col_right:
         labels={"Eficiencia_%": "Eficiência (%)"}
     )
     fig_ef.add_hline(y=100, line_dash="dash", line_color="green", annotation_text="Meta (100%)")
-    st.plotly_chart(fig_prod, use_container_width=True)
+    st.plotly_chart(fig_ef, use_container_width=True, key="grafico_eficiencia")
 
 # ---------------------------------------------------------
 # 5. FORMULÁRIO DE ENTRADA DE DADOS (CENTRALIZAÇÃO DA COLETA)
