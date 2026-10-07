@@ -62,7 +62,7 @@ with col_left:
         df_setor, x="Data", y=["Producao_Planejada", "Producao_Real"],
         barmode="group", labels={"value": "Quantidade", "variable": "Métrica"}
     )
-    st.plotly_chart(fig_prod, width='stretch')(fig_prod, use_container_width=True)
+    st.plotly_chart(fig_prod, width='stretch')
 
 with col_right:
     st.markdown("### Evolução da Eficiência (%)")
